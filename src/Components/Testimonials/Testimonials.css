@@ -1,0 +1,223 @@
+/* Add Animation Keyframes */
+@keyframes rollIn {
+  0% {
+    transform: translateX(-100%) rotate(-120deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rollOut {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) rotate(120deg);
+    opacity: 0;
+  }
+}
+
+/* Testimonials Container */
+.testimonials {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f9f9f9;
+  background-image: url('../Assets//testimonial_bg.jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.testimonials h2{
+  text-align: right;
+    color: black;
+    font-weight: bold;
+    font-size: 40px; /* Default for larger screens */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    padding-right: 60px;
+}
+.testimonials h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #d8d8d8;
+  margin: 0 auto;
+  transition: width 0.5s ease;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.testimonials h2:hover::after {
+  width: 50%;
+  text-align: right;
+}
+
+.testimonials-heading {
+  font-size: 2rem; /* Larger for desktops */
+  margin-bottom: 2rem;
+  color: black;
+}
+
+/* Testimonial Wrapper */
+.testimonial-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  margin: 0 auto;
+  width: 50%;
+  left: 25%;
+}
+
+/* Testimonial Items Container */
+.testimonial-items {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.testimonial-item {
+  flex: 1 1 30%;
+  padding: 1rem;
+  text-align: center;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  animation: rollIn 0.8s ease-in-out forwards; /* Apply animation on load */
+}
+
+.testimonial-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Transition for dynamic roll-out (optional) */
+.testimonial-item.roll-out {
+  animation: rollOut 0.8s ease-in-out forwards;
+}
+
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.testimonial-feedback {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+/* Navigation Arrows */
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+.left-arrow {
+  margin-right: 1rem;
+}
+
+.right-arrow {
+  margin-left: 1rem;
+}
+
+/* Responsive Styles */
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .testimonial-items{
+    margin-right: 40px;
+  }
+  .testimonials{
+    background-image: none;
+  }
+  .testimonials-heading {
+    font-size: 1.8rem; /* Adjust font size for tablets */
+  }
+
+  .testimonial-wrapper {
+    width: 90%; 
+  }
+
+  .testimonial-item {
+    flex: 1 1 45%; 
+  }
+
+  .testimonial-image {
+    width: 70px; /* Adjust image size */
+    height: 70px;
+  }
+
+  .arrow {
+    font-size: 1.8rem; /* Adjust arrow size */
+  }
+}
+
+/* Mobile Devices (Below 768px) */
+@media (max-width: 768px) {
+  .testimonials h2{
+    font-size: 1rem;
+    text-align: center;
+  }
+  .testimonial-items{
+    margin-right: 40px;
+  }
+  .testimonials-heading {
+    font-size: 1.5rem; /* Smaller font for mobile */
+  }
+
+  .testimonial-wrapper {
+    flex-direction: column; /* Stack testimonials vertically */
+    width: 100%; /* Full width */
+    margin: 0 auto;
+  }
+
+  .testimonial-items {
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Maintain spacing */
+  }
+
+  .testimonial-item {
+    flex: 1 1 100%; /* Full-width items */
+    padding: 0.8rem; /* Compact padding */
+  }
+
+  .testimonial-image {
+    width: 60px; /* Smaller images */
+    height: 60px;
+  }
+
+  .arrow {
+    font-size: 1.5rem; /* Smaller arrows */
+  }
+}

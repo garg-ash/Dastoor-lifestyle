@@ -1,0 +1,251 @@
+/* Resetting some global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Back Design Section */
+.backdesign {
+  width: 100%;
+  height: 250px;
+  background-color: #b3bd9b; 
+  position: absolute; 
+  top: 20%;
+  animation: fadeInUp 1s ease-out;
+}
+
+.mailing {
+  min-height: 700px;
+  background-color: #ffffff;
+  position: relative;
+  margin-top: 80px;
+}
+
+/* Image Section */
+.contectimg {
+  height: 600px;
+  width: 490px;
+  position: absolute;
+  top: -10px;
+  left: 16%;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.contectimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contact Form */
+.contactus {
+  width: 480px;
+  background-color: #ffffff;
+  box-shadow: 8px 8px 20px rgb(107, 102, 102);
+  padding: 40px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50px;
+  right: 370px;
+  animation: fadeInUp 1s ease-out 0.3s;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1b7239;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #1b7239;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  animation: fadeInUp 1s ease-out 0.7s;
+}
+
+button[type="submit"]:hover {
+  background-color: #155c29;
+}
+
+/* Header for Contact Us */
+.us {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: fadeInUp 1s ease-out 0.5s;
+  margin-bottom: 20px;
+}
+
+/* Divider line */
+hr:not([size]) {
+  height: 5px;
+  padding: 0;
+  margin: 15px 0;
+  background-color: #20cb5b;
+}
+
+/* General Section Styling */
+.map_section {
+  padding: 50px 15px;
+  background-color: #f9f9f9;
+}
+
+.map_section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.map_section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.map_section .address {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.map_section .address h4 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.map_section .address p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.map_section .map {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map_section iframe {
+  border: none;
+  width: 100%;
+  height: 400px;
+}
+
+/* Responsive Design */
+
+/* For Tablets and smaller screens (max-width: 992px) */
+@media (max-width: 992px) {
+  .contactus {
+    width: 80%;
+    top: 100px;
+    right: 10%;
+    padding: 30px;
+  }
+
+  .contectimg {
+    width: 70%;
+    left: 15%;
+    height: auto;
+  }
+
+  .map_section .address p {
+    font-size: 14px;
+  }
+}
+
+/* For Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .contactus {
+    width: 90%;
+    top: 60px;
+    left: 5%;
+    padding: 20px;
+  }
+
+  .contectimg {
+    width: 100%;
+    left: 0;
+    top: 10px;
+    height: 350px;
+  }
+
+  .us {
+    font-size: 2rem;
+  }
+
+  .map_section iframe {
+    height: 300px;
+  }
+}
+
+/* For very small screens (max-width: 576px) */
+@media (max-width: 576px) {
+  .contactus {
+    width: 100%;
+    top: 50px;
+    left: 0;
+    padding: 15px;
+  }
+
+  .contectimg {
+    width: 100%;
+    left: 0;
+    top: 10px;
+    height: 300px;
+  }
+
+  .us {
+    font-size: 1.75rem;
+  }
+
+  .map_section .address p {
+    font-size: 13px;
+  }
+}
+
+/* Keyframes for animations */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

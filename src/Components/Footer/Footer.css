@@ -1,0 +1,211 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background-color:#afc6b5;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+    position: relative;
+    /* background-image: url('../Assets/footerbg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9; */
+    /* background-color: #14494c;
+    opacity: 0.9; */
+}
+
+/* Footer Columns */
+footer div {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* First Column (Logo and Description) */
+.first-colom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-image {
+    height: 100px;
+    width: 150px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.logo-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.logo-image img:hover {
+    transform: scale(1.1);
+}
+
+.first-colom p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: black;
+    font-weight: 700;
+}
+
+/* Second, Third, and Fourth Columns */
+.second-colom,
+.third-colom,
+.fourth-colom {
+    padding: 10px;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #b0b796;
+    display: inline-block;
+    font-weight: 800;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ul li a:hover {
+    /* color: #b0b796; */
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    transform: translateX(5px);
+}
+
+/* Fourth Column Contact Styling */
+.fourth-colom h3::after {
+    content: " 📞";
+}
+
+.fourth-colom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Footer Bottom Gradient */
+footer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #b0b796, #333);
+}
+
+/* Responsive Design */
+
+/* Laptops (Above 1024px) */
+@media (min-width: 1024px) {
+    footer {
+        flex-wrap: nowrap;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    ul li a {
+        font-size: 16px;
+    }
+
+    .first-colom p {
+        font-size: 16px;
+    }
+}
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    ul li a {
+        font-size: 14px;
+    }
+
+    .first-colom p {
+        font-size: 14px;
+    }
+
+    .logo-image {
+        height: 80px;
+        width: 120px;
+    }
+}
+
+/* Mobile Phones (Below 768px) */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 30px 50px;
+
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    ul li a {
+        font-size: 12px;
+    }
+
+    .first-colom p {
+        font-size: 12px;
+    }
+
+    .logo-image {
+        height: 70px;
+        width: 100px;
+    }
+
+    .fourth-colom h3::after {
+        content: "";
+    }
+}

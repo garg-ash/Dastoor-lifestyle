@@ -1,0 +1,560 @@
+*{
+  margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+ font-family: "Poppins";
+}
+
+.createback2
+
+{  
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 70px;
+    background-color: #cad1b6;      
+}
+.weroom h1{
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 70px;
+   
+}
+.weroom p
+{
+    font-size: 18px;
+    text-align: left;
+   
+   
+}
+.roomimg
+{    margin-top: 20px;
+    height: 580px;
+}
+.weback
+{
+    width: 100px;
+    height: 200px;
+   
+    background-color: black;
+}
+
+.roomimg img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.roomimg img:hover {
+    transform: scale(1.01);     
+  }
+/* 
+    /* ............section 2 css */
+    .section2 {
+        margin: 60px;
+        height: auto;
+      }
+ 
+    
+ .imageup img
+    {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+    }
+.ourprocess h1
+{
+
+     text-align: center;
+     font-size: 35px;
+     font-weight: bolder;
+     padding-top: 60px;
+}
+
+.ourprocess p
+{
+
+    
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.Innovative h1
+{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
+    padding-top: 30px;
+
+}
+.Innovative p
+{
+
+    
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+.imagedown 
+{
+  margin-top: 50px;
+   
+}
+ .imagedown img
+    {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+    }
+    .Innovative h1:hover
+    {
+        text-decoration: underline;
+        text-decoration-color:#cad1b6;
+    }
+    .ourprocess h1:hover
+    {
+        text-decoration: underline;
+        text-decoration-color:#cad1b6;
+    }
+    .imagedown img:hover {
+        transform: scale(1.01); 
+        box-shadow: 0 10px 20px #ada5a5;
+        border: solid 2px #cad1b6;
+        border-radius: 10px;
+      }
+      .imageup img:hover {
+        transform: scale(1.01); 
+        box-shadow: 0 10px 20px #ada5a5;
+        border: solid 2px #cad1b6;
+        border-radius: 10px;
+       
+      }
+  /* code 3 stat here */
+
+  .section3
+
+  {
+ margin-top: 70px ;
+  }
+
+
+/* Styling for the section */
+.createback {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 70px 0px;
+    background-color: #cad1b6;
+    height: auto; 
+  }
+  .whiteback {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: white;
+    width: 100%;
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+  }
+  .wewentimg {
+    flex: 1 1 50%; 
+    
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wewentimg img {
+    width: 100%;
+    max-width: 420px; 
+    height: auto;
+    position: relative;
+    top: -50px;
+    border-radius: 10px;
+  }
+  .wewentyou {
+    flex: 1 1 50%; 
+    padding-right: 30px;
+    text-align: left;
+  }
+  .wewentyou h1 {
+    font-size: 3rem; 
+    font-weight: bolder;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 0px 60px;
+    
+  }
+  .wewentyou p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: left;
+   
+  }
+  .wewentyou h1:hover {
+    text-decoration: underline;
+    text-decoration-color: #cad1b6;
+  }
+  .wewentimg img:hover {
+    transform: scale(1.01); 
+    border: solid 2px #cad1b6;
+    box-shadow: 0px 10px 20px #ada5a5;
+    border-radius: 10px;
+  } 
+
+  /* For tablets and smaller devices */
+  @media (max-width: 1024px) {
+    .wewentyou h1 {
+      font-size: 2.5rem; 
+    }
+    .wewentyou p {
+      font-size: 1.1rem; 
+    }
+    .wewentimg img {
+      max-width: 320px;
+    }
+    .whiteback {
+      flex-direction: column; 
+      text-align: center;
+      padding: 20px 10px; 
+    }
+   .wewentyou {
+      padding-right: 0;
+      padding-top: 20px;
+    }
+  }
+  
+  /* For mobile phones */
+  @media (max-width: 576px) {
+    .createback {
+      padding: 50px 0;
+    }
+  
+    .wewentyou h1 {
+      font-size: 2rem; 
+    }
+  
+    .wewentyou p {
+      font-size: 1rem; 
+    }
+  
+    .wewentimg img {
+      max-width: 280px; 
+    }
+  
+    .whiteback {
+      flex-direction: column; 
+      padding: 10px; 
+    }
+  
+    .wewentyou {
+      padding: 0 10px;
+      text-align: center;
+    }
+    .weroom
+    {
+      padding: 0px 0px;
+    }
+
+    .createback2{
+      padding: 0px 15px;
+    }
+  }
+  
+
+  
+  /* Define the keyframe animation */
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-50px); 
+      opacity: 0; 
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1; 
+    }
+  }
+  
+  
+  .createback .container {
+    animation: slideInFromTop 0.8s ease-out forwards;
+  }
+  
+  
+  .weroom, .roomimg {
+    animation: slideInFromTop 0.8s ease-out forwards;
+    opacity: 0; 
+    animation-delay: 0.2s; 
+  }
+  
+  .roomimg {
+    animation-delay: 0.4s; 
+  }
+  
+  
+  .weroom {
+    animation-delay: 0.2s;
+  }
+  
+  .roomimg img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+ 
+  .roomimg img:hover {
+    transform: scale(1.01); 
+    box-shadow: 0 10px 20px #ada5a5;
+  } */
+
+
+  
+  /* section 2 media */
+ /* Custom CSS for spacing and font size adjustments */
+.section2 {
+    padding: 30px 0;
+  }
+  
+  h1 {
+    font-size: 2rem; 
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1rem; 
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.75rem;
+    }
+  
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  
+    .imageup img, .imagedown img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+
+    .ourprocess p, .Innovative p {
+      font-size: 0.95rem;
+    }
+  
+    
+    .imagedown img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .ourprocess p, .Innovative p {
+      font-size: 0.9rem; 
+    }
+  
+    
+    .imageup, .imagedown {
+      margin-bottom: 15px;
+    }
+  }
+
+
+
+
+  /* section4 css start from here */
+
+
+
+/* Section 4 */
+.section4 {
+  height: 600px;
+  background-color: #ffffff;
+}
+
+.founderwords {
+  text-align: left;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.founderwords h1 {
+  text-align: left;
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #000000dd;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+.quote {
+  width: 120px;
+  margin-top: 40px;
+  padding-right: 60px;
+  height: 50px;
+}
+
+.quote img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founderimg {
+  width: 350px;
+  height: 400px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.founderimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founderimg h1 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.founderimg h3 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  color: #bcc79e;
+  padding: 0px 70px;
+}
+
+.founderimg img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 20px 20px #ada5a5;
+  border: solid 2px #bcc79e;
+  border-radius: 10px;
+}
+
+.founderwords h1:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px #bcc79e;
+}
+
+
+h3 {
+ 
+   margin-bottom: unset !important; 
+  
+  
+   text-transform: unset !important; 
+   letter-spacing: unset !important; 
+   border-bottom: unset !important; 
+   display: unset !important; 
+   font-weight: unset !important; 
+} 
+
+
+
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .founderwords h1 {
+    font-size: 36px;
+  }
+
+  .quote {
+    padding-right: 30px;
+  }
+
+  .founderimg {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+
+  }
+
+  .founderimg h1 {
+    font-size: 28px;
+  }
+
+  .founderimg h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .founderwords h1 {
+    font-size: 30px;
+  }
+
+  .quote {
+    padding-right: 20px;
+  }
+
+  .founderimg {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .founderimg h1 {
+    font-size: 26px;
+  }
+
+  .founderimg h3 {
+    font-size: 20px;
+    padding-left: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .founderwords h1 {
+    font-size: 26px;
+    text-align: center;
+    
+  }
+
+  .quote {
+    padding-right: 10px;
+    width: 70px;
+  }
+
+  .founderimg {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .founderimg h1 {
+    font-size: 24px;
+  }
+
+  .founderimg h3 {
+    font-size: 18px;
+  }
+
+  .section4 {
+    height: auto;
+    
+  }
+}
