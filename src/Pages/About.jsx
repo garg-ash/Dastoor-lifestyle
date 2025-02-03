@@ -7,6 +7,8 @@ import photo3 from '../Components/Assets/photo3.jpeg'
 import photo5 from '../Components/Assets/photo5.jpeg'
 // import photo6 from '../Components/Assets/photo6.jpg'
 import AboutHero from './AboutHero';
+import Info from '../Components/Info/Info.jsx'
+
 
 
 

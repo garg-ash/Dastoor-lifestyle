@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import {
   sofa,
@@ -37,42 +37,25 @@ function ProductPage() {
 
   const images = categoryMap[category] || []; // Default to empty array if category not found
 
-  const [flipped, setFlipped] = useState({}); // Track flipped state for each card
-
-  const handleFlip = (id) => {
-    setFlipped((prev) => ({
-      ...prev,
-      [id]: !prev[id], // Toggle flip state for the selected card
-    }));
-  };
-
   return (
     <>
       <Hero />
       <section className="product-page">
         <div className="container">
-          <h2>{category.toUpperCase()} Images</h2>
+          <h2>{category.toUpperCase()} Products</h2>
           <div className="image-grid">
             {images.map((item) => (
-              <div
-                key={item.id}
-                className="image-item"
-                onClick={() => handleFlip(item.id)}
-              >
-                <div className={`card ${flipped[item.id] ? "is-flipped" : ""}`}>
-                  <div className="card__face card__face--front">
-                    <img src={item.src} alt={item.alt} />
-                    <h5>{item.alt}</h5>
-                  </div>
-                  <div className="card__face card__face--back">
-                    <p>Height: {item.height || "N/A"}</p>
-                    <p>Width: {item.width || "N/A"}</p>
-                    <p>Depth: {item.depth || "N/A"}</p>
-                    <p>Weight: {item.weight || "N/A"}</p>
-                    <p>Material: {item.material || "N/A"}</p>
-                    <p>Color: {item.color || "N/A"}</p>
-                    <p>Price: {item.price || "N/A"}</p>
-                  </div>
+              <div key={item.id} className="image-item">
+                <img src={item.src} alt={item.alt} className="product-image" />
+                <h5>{item.alt}</h5>
+                <div className="product-details">
+                  <p><strong>Height:</strong> {item.height || "N/A"}</p>
+                  <p><strong>Width:</strong> {item.width || "N/A"}</p>
+                  <p><strong>Depth:</strong> {item.depth || "N/A"}</p>
+                  <p><strong>Weight:</strong> {item.weight || "N/A"}</p>
+                  <p><strong>Material:</strong> {item.material || "N/A"}</p>
+                  <p><strong>Color:</strong> {item.color || "N/A"}</p>
+                  <p><strong>Price:</strong> {item.price || "N/A"}</p>
                 </div>
               </div>
             ))}
